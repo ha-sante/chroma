@@ -39,7 +39,6 @@ type Server struct {
 }
 
 func New(config Config) (*Server, error) {
-	// TODO: its not possible to run the server without a db because this is done here (AHHHHHHH WTH)
 	// dBConfig := dbcore.DBConfig{
 	// 	Username:     config.Username,
 	// 	Password:     config.Password,

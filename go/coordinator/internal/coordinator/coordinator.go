@@ -26,7 +26,6 @@ func NewCoordinator(ctx context.Context, assignmentPolicy CollectionAssignmentPo
 	}
 
 	catalog := coordinator.NewMemoryCatalog()
-	// catalog := coordinator.NewTableCatalog(dbcore.NewTxImpl(), dao.NewMetaDomain())
 	meta, err := NewMetaTable(s.ctx, catalog)
 	if err != nil {
 		return nil, err
