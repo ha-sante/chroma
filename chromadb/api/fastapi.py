@@ -438,7 +438,11 @@ class FastAPI(ServerAPI):
     def _submit_batch(
         self,
         batch: Tuple[
-            IDs, Optional[Embeddings], Optional[Metadatas], Optional[Documents]
+            IDs,
+            Optional[Embeddings],
+            Optional[Metadatas],
+            Optional[Documents],
+            Optional[URIs],
         ],
         url: str,
     ) -> requests.Response:
@@ -453,6 +457,7 @@ class FastAPI(ServerAPI):
                     "embeddings": batch[1],
                     "metadatas": batch[2],
                     "documents": batch[3],
+                    "uris": batch[4],
                 }
             ),
         )
