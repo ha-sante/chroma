@@ -516,7 +516,7 @@ class SegmentAPI(ServerAPI):
             metadatas=_clean_metadatas(metadatas) if "metadatas" in include else None,  # type: ignore
             documents=documents if "documents" in include else None,  # type: ignore
             uris=uris if "uris" in include else None,  # type: ignore
-            datas=None,
+            data=None,
         )
 
     @trace_method("SegmentAPI._delete", OpenTelemetryGranularity.OPERATION)
@@ -706,7 +706,7 @@ class SegmentAPI(ServerAPI):
             embeddings=embeddings if embeddings else None,
             documents=documents if documents else None,
             uris=uris if uris else None,
-            datas=None,
+            data=None,
         )
 
     @trace_method("SegmentAPI._peek", OpenTelemetryGranularity.OPERATION)

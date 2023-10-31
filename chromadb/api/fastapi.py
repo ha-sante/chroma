@@ -410,7 +410,7 @@ class FastAPI(ServerAPI):
             embeddings=body.get("embeddings", None),
             metadatas=body.get("metadatas", None),
             documents=body.get("documents", None),
-            datas=None,
+            data=None,
             uris=body.get("uris", None),
         )
 
@@ -564,8 +564,8 @@ class FastAPI(ServerAPI):
             embeddings=body.get("embeddings", None),
             metadatas=body.get("metadatas", None),
             documents=body.get("documents", None),
-            datas=None,
             uris=body.get("uris", None),
+            data=None,
         )
 
     @trace_method("FastAPI.reset", OpenTelemetryGranularity.ALL)
